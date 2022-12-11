@@ -1,0 +1,54 @@
+.footer{
+    .container{
+        border-top: 1px solid #000;
+        display: flex;
+        .left{
+            margin-top: 50px;
+            &__list{
+                margin-bottom: 50px;
+                padding-left: 0;
+                display: flex;
+                &__item{
+                    a{
+                        color: #000;
+                    }
+                }
+            }
+            &__info{
+                margin-top: 50px;
+                margin-bottom: 110px;
+            }
+        }
+        .right{
+            margin-left: 400px;
+            margin-top: 50px;
+            &__list1{
+                padding-left: 2px;
+                padding-bottom: 1rem;
+                display: flex;
+                align-items: center;
+                width: 400px;
+                justify-content: space-between;
+                border-bottom: 1px solid #000;
+                &__itam{
+                    a{
+                        font-size: 1.5rem;
+                        color: #707070;
+                    }
+                }
+            }
+            &__list2{
+                margin-top: 50px;
+                margin-left: 220px;
+                display: flex;
+                justify-content: space-between;
+                &__itam{
+                    margin-bottom: 110px;
+                    a{
+                        color: #707070;
+                    }
+                }
+            }
+        }
+    }
+}
