@@ -7,11 +7,14 @@ import Product3 from "../assest/img/product3.png"
 import Product4 from "../assest/img/product4.png"
 
 function Intro() {
-    const [count, setCount] = useState(0)
-    const [wish, setWish] = useState(false)
+    const numb = JSON.parse(localStorage.getItem('count'))
+    const wis = JSON.parse(localStorage.getItem('wish'))
+    const [count, setCount] = useState(numb)
+    const [wish, setWish] = useState(wis)
     const [img, setImg] = useState(0)
     window.localStorage.setItem("count", JSON.stringify(count))
     window.localStorage.setItem("wish", JSON.stringify(wish))
+    console.log(numb);
   return (
     <section className='intro'>
         <div className="container">
@@ -26,15 +29,15 @@ function Intro() {
                 
             </div>
             <div className="right">
-                <h1 className='right__name'>Lira Earrings</h1>
-                <p className='right__price'>$ 20,00</p>
+                {img == 1 ? <h1 className='right__name'>Hal Earrings</h1> : img  == 2 ? <h1 className='right__name'>Kaede Hair Pin Set Of 3</h1> : img == 3 ? <h1 className='right__name'>Hair Pin Set of 3</h1> : <h1 className='right__name'>Plaine Necklace</h1>}
+                {img == 1 ? <p className='right__price'>$ 25,00</p> : img  == 2 ? <p className='right__price'>$ 30,00</p> : img == 3 ? <p className='right__price'>$ 35,00</p> : <p className='right__price'>$ 19,00</p>}
                 <img className='right__star' src={Star} alt="" />
                 <p className='right__discriptions'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam placerat, augue a volutpat hendrerit, sapien tortor faucibus augue, a maximus elit ex vitae libero. Sed quis mauris eget arcu facilisis consequat sed eu felis. </p>
                 <ul className='right__list'>
                     <li className='right__list__item'>
                         <ul className='right__list__item__count'>
                             <li className='right__list__item__count__elements'><button onClick={()=> setCount(count > 0 ? count - 1 : count)}>-</button></li>
-                            <li className='right__list__item__count__elements'>{localStorage.getItem('count')}</li>
+                            <li className='right__list__item__count__elements'>{numb}</li>
                             <li className='right__list__item__count__elements'><button onClick={()=> setCount(count + 1)}>+</button></li>
                         </ul>
                     </li>
