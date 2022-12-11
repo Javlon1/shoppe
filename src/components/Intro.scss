@@ -13,7 +13,7 @@
                         border: none;
                         background: none;
                         border-radius: .5rem;
-                        img{
+                        img{ 
                             width: 120px;
                             height: 120px;
                             border-radius: .5rem;
@@ -181,11 +181,24 @@
 @media (max-width: 420px) {
     .intro{
         .container{
+            padding-top: 120px;
+            display: block;
             .left{
-                display: none;
+                display: block;
+                .left{
+                    &__list{
+                        display: none;
+                    }
+                    &__img{
+                        border-radius: .5rem;
+                        width: 290px;
+                        height: 374px;
+                    }
+                }
+
             }
             .right{
-                display: none;
+
             }
         }
     }

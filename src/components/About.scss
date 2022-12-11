@@ -66,3 +66,10 @@
         }
     }
 }
+
+
+@media (max-width: 420px) {
+    .about{
+        display: none;
+    }
+}
